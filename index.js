@@ -6,25 +6,48 @@ function myFunction(){
     var 
     random1 = createDiceRandom(), 
     random2 = createDiceRandom(),
-    img1 = document.querySelectorAll(".die-img")[0],
-    img2 = document.querySelectorAll(".die-img")[1],
+    img = document.querySelectorAll(".die-img"),
+    imgShadow = document.querySelectorAll(".img-shadow"),
     mainTitle = document.querySelector(".page-title"),
     player1 = document.querySelectorAll(".player-title")[0],
     player2 = document.querySelectorAll(".player-title")[1],
     victoryMessage = "";
     
-    img1.setAttribute("src", "images/dice" + random1 + ".png");
-    img2.setAttribute("src", "images/dice" + random2 + ".png");
+    img[0].setAttribute("src", "images/dice" + random1 + ".png");
+    img[1].setAttribute("src", "images/dice" + random2 + ".png");
+
     
+
     if(random1 > random2){
         victoryMessage = "<i class='fas fa-flag'></i> " + player1.textContent + " Wins";
     } else if(random2 > random1){
-        victoryMessage = player2.textContent + "Wins <i class='fas fa-flag'></i>";
+        victoryMessage = player2.textContent + " Wins <i class='fas fa-flag'></i>";
     } else {
         victoryMessage = "That's a draw";
     }
     
     mainTitle.innerHTML = victoryMessage;
+
+    for(var i = 0 ; i < img.length; i++){
+        img[i].classList.add("shake-transition");
+    }
+
+    for(var i = 0 ; i < imgShadow.length; i++){
+        imgShadow[i].classList.add("shadow-transition");
+    }
+
+    setTimeout(function(){
+        img.forEach(function(image){
+            image.classList.remove("shake-transition");
+        });
+    }, 1000);
+
+    setTimeout(function(){
+        imgShadow.forEach(function(shadow){
+            shadow.classList.remove("shadow-transition");
+        });
+    }, 1000);
+
 }
 
 function editNames(){

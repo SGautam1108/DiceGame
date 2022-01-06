@@ -54,8 +54,10 @@ h1{
   color: #EEEEEE;
 }
 
+
 .die-img{
   filter: drop-shadow(0 0 10px #ee9d5b);
+  
 }
 
 .img-shadow{
@@ -68,6 +70,53 @@ h1{
   transform: perspective(10em) rotateX(60deg) scale(1, 0.5);
   filter: blur(4em);
 }
+
+.shake-transition{
+  animation: shake 0.5s;
+}
+
+@keyframes shake{
+  0%{
+    transform: rotate(8deg);
+  }
+
+  30%{
+    transform: rotate(-8deg);
+  }
+
+  60%{
+    transform: rotate(8deg);
+  }
+
+  100%{
+    tranform: rotate(-8deg);
+  }
+}
+
+.shadow-transition{
+  animation: shadow 0.5s;
+}
+
+@keyframes shadow{
+  0%{
+    transform: perspective(10em) rotateX(60deg) scale(1, 0.5);
+  }
+
+  30%{
+    transform: perspective(10em) rotateX(60deg) scale(0.8, 0.5);
+  }
+
+  60%{
+    transform: perspective(10em) rotateX(60deg) scale(0.8, 0.5);
+  }
+
+  100%{
+    transform: perspective(10em) rotateX(60deg) scale(1, 0.5);
+  }
+}
+
+
+
 
 @media(max-width: 991px){
   .img-shadow{
