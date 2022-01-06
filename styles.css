@@ -1,0 +1,98 @@
+html{
+  scroll-behavior: smooth;
+}
+
+body{
+  text-align:center;
+  background-color: #222831;
+  color: #585f69;
+  font-family: 'Philosopher', sans-serif;
+}
+
+h1{
+  font-family: 'Abril Fatface', cursive;
+}
+
+/* Header section */
+
+#header{
+  padding: 1% 15% 3%;
+}
+
+.page-title{
+  font-size: 7rem;
+  color:#EEEEEE;
+}
+
+.fa-flag{
+  color: #ee9d5b;
+  font-size: 5rem;
+}
+
+.refresh-btn{
+  margin-top: 2%;
+}
+
+/* Game section */
+
+#game-section{
+  padding: 0% 15% 5%;
+}
+
+.player-div{
+  position: relative;
+  margin-bottom: 5%;
+}
+
+.player-title{
+  font-size: 2rem;
+  padding-bottom: 5%;
+  color: #EEEEEE;
+}
+
+.die-img{
+  filter: drop-shadow(0 0 10px #ee9d5b);
+}
+
+.img-shadow{
+  position: absolute;
+  top: 105%;
+  left: 35%;
+  width: 30%;
+  height: 25%;
+  background-color: #da974a;
+  transform: perspective(10em) rotateX(60deg) scale(1, 0.5);
+  filter: blur(4em);
+}
+
+@media(max-width: 991px){
+  .img-shadow{
+    display: none;
+  }
+
+  .die-img{
+    filter: 
+    drop-shadow(0 0 10px #EEEEEE) drop-shadow(0 0 10px #ee9d5b);
+  }
+}
+
+/* Contact */
+
+.contact-link-icon{
+  display: inline-block;
+  color: #EEEEEE;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  transition: all 0.2s ease;
+}
+
+.contact-link-icon:hover{
+  color:black;
+  transform: scale(1.2);
+  filter: drop-shadow(0px 0px 3px #EEEEEE);
+}
+
+.copyright-text{
+  margin-top: 0.5%;
+}
