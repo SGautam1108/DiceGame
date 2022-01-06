@@ -30,7 +30,11 @@ h1{
 }
 
 .refresh-btn{
-  margin-top: 2%;
+  margin: 2%;
+}
+
+.edit-names{
+  margin: 2%;
 }
 
 /* Game section */
