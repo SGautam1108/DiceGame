@@ -3,7 +3,11 @@ html{
 }
 
 body{
+  position: relative;
+  display:flex;
+  flex-direction: column;
   text-align:center;
+  min-height: 100vh;
   background-color: #222831;
   color: #585f69;
   font-family: 'Philosopher', sans-serif;
@@ -16,17 +20,17 @@ h1{
 /* Header section */
 
 #header{
-  padding: 1% 15% 3%;
+  padding: 1% 15%;
 }
 
 .page-title{
-  font-size: 7rem;
+  font-size: 7vmax;
   color:#EEEEEE;
 }
 
 .fa-flag{
   color: #ee9d5b;
-  font-size: 5rem;
+  font-size: 5vmax;
 }
 
 .refresh-btn{
@@ -40,24 +44,30 @@ h1{
 /* Game section */
 
 #game-section{
-  padding: 0% 15% 5%;
+  padding: 0 15%;
+}
+
+.row{
+  width: 80%;
+  margin: auto;
 }
 
 .player-div{
   position: relative;
-  margin-bottom: 5%;
+  margin-bottom: 3%;
 }
 
 .player-title{
+  padding-top: 2em;
   font-size: 2rem;
-  padding-bottom: 5%;
   color: #EEEEEE;
 }
 
-
 .die-img{
+  padding: 10%;
+  padding-bottom: 0;
+  max-width: 100%;
   filter: drop-shadow(0 0 10px #ee9d5b);
-  
 }
 
 .img-shadow{
@@ -115,21 +125,28 @@ h1{
   }
 }
 
-
-
-
 @media(max-width: 991px){
+  body{
+    padding-bottom: 20vh;
+  }
+
   .img-shadow{
     display: none;
   }
 
   .die-img{
     filter: 
-    drop-shadow(0 0 10px #EEEEEE) drop-shadow(0 0 10px #ee9d5b);
+      drop-shadow(0 0 10px #EEEEEE) drop-shadow(0 0 10px #ee9d5b);
   }
 }
 
 /* Contact */
+
+#contact{
+  position: absolute;
+  bottom: 0; 
+  width: 100%;
+}
 
 .contact-link-icon{
   display: inline-block;

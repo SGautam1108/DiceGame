@@ -16,7 +16,6 @@ function myFunction(){
     img[0].setAttribute("src", "images/dice" + random1 + ".png");
     img[1].setAttribute("src", "images/dice" + random2 + ".png");
 
-    
 
     if(random1 > random2){
         victoryMessage = "<i class='fas fa-flag'></i> " + player1.textContent + " Wins";
@@ -40,14 +39,13 @@ function myFunction(){
         img.forEach(function(image){
             image.classList.remove("shake-transition");
         });
-    }, 1000);
+    }, 500);
 
     setTimeout(function(){
         imgShadow.forEach(function(shadow){
             shadow.classList.remove("shadow-transition");
         });
-    }, 1000);
-
+    }, 500);
 }
 
 function editNames(){
